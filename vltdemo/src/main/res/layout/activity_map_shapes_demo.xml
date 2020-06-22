@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapShapesDemo">
+    <com.verizon.location.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/frosted_background"
+        android:clickable="true"
+        android:onClick="shapeListDialog"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/shape_options"
+            style="@style/FrostText"
+            android:text="@string/map_shapes_dialog_label"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/polyline"
+            style="@style/FrostText"
+            android:text="@string/polyline_label"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/polygon"
+            style="@style/FrostText"
+            android:text="@string/polygon_label"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/circle"
+            style="@style/FrostText"
+            android:text="@string/circle_label"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/marker"
+            style="@style/FrostText"
+            android:text="@string/marker_label"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

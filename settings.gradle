@@ -1,0 +1,3 @@
+include ':vltdemo-java'
+include ':vltdemo'
+rootProject.name = "VLT Demo"

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">VLT Demo-Java</string>
+    <string name="map_key">ENTER YOUR MAP KEY HERE</string>
+
+    <string name="title_activity_main">Home</string>
+    <string name="title_activity_map_mode_demo">Mode</string>
+    <string name="title_activity_map_traffic">Traffic</string>
+    <string name="title_activity_map_camera_demo">Camera</string>
+    <string name="title_activity_map_gestures">Map Gestures</string>
+    <string name="title_activity_map_shapes_demo">Shapes &amp; Markers</string>
+    <string name="title_activity_user_location_demo">User Location</string>
+
+    <string name="welcome_header_label">Welcome to the VLT Demo Application, view our supported functionality below.</string>
+    <string name="mode_header_label">Verizon map modes show fresh day-time map tiles in multiple styles (e.g. - day, night, satellite) with additional options including terrain or traffic flow.</string>
+    <string name="camera_header_label">Use camera controls to programmatically set, manage and limit user zoom, tilt and bearing.</string>
+    <string name="shapes_header_label">Place points, lines, and shapes to customize maps. Use geojson feature collections to render large scale datasets.</string>
+    <string name="traffic_header_label">Control traffic layer visibilty.</string>
+    <string name="gestures_header_label">Use Gesture interface to listen for map events.</string>
+    <string name="user_location_header_label">Display your real-time location, anywhere in the world.</string>
+
+    <string name="camera_metric_tilt_label">Tilt: %1$s</string>
+    <string name="camera_metric_bearing_label">Bearing: %1$s</string>
+    <string name="camera_metric_zoom_label">Zoom Level: %1$s</string>
+
+    <string name="day_mode_label">Day Mode</string>
+    <string name="night_mode_label">Night Mode</string>
+    <string name="satellite_mode_label">Satellite Mode</string>
+
+    <string name="tilt_label">Tilt</string>
+    <string name="update_label">Update</string>
+    <string name="welcome_label">Welcome</string>
+    <string name="bearing_label">Bearing</string>
+    <string name="zoom_label">Zoom Level</string>
+    <string name="dismiss_label">Dismiss</string>
+    <string name="map_camera_dialog_label">Camera Metrics</string>
+    <string name="current_camera_metrics_label">Current Metrics</string>
+    <string name="map_shapes_dialog_label">Shape &amp; Marker options</string>
+
+    <string name="circle_label">Circle</string>
+    <string name="marker_label">Marker</string>
+    <string name="polygon_label">Polygon</string>
+    <string name="geojson_label">GeoJson</string>
+    <string name="traffic_label">Traffic</string>
+    <string name="polyline_label">Polyline</string>
+    <string name="traffic_on_label">Traffic On</string>
+    <string name="traffic_off_label">Traffic Off</string>
+</resources>
