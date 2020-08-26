@@ -7,31 +7,45 @@
     android:padding="16dp"
     >
     <CheckBox
-        android:id="@+id/polyline"
+        android:id="@+id/multi_polygon_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/polyline_label"
+        android:text="@string/multipolygon_label"
         android:buttonTint="@color/checkboxButtonTint"
         />
     <CheckBox
-        android:id="@+id/polygon"
+        android:id="@+id/polygon_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/polygon_label"
         android:buttonTint="@color/checkboxButtonTint"
         />
     <CheckBox
-        android:id="@+id/circle"
+        android:id="@+id/point_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/circle_label"
+        android:text="@string/point_label"
         android:buttonTint="@color/checkboxButtonTint"
         />
     <CheckBox
-        android:id="@+id/marker"
+        android:id="@+id/linestring_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/marker_label"
+        android:text="@string/linestring_label"
+        android:buttonTint="@color/checkboxButtonTint"
+        />
+    <CheckBox
+        android:id="@+id/multi_point_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/multipoint_label"
+        android:buttonTint="@color/checkboxButtonTint"
+        />
+    <CheckBox
+        android:id="@+id/multi_linestring_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/multilinestring_label"
         android:buttonTint="@color/checkboxButtonTint"
         />
 </LinearLayout>

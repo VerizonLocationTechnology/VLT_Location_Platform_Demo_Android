@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#C10101</color>
-    <color name="colorPrimaryDark">#890000</color>
-    <color name="colorAccent">#626262</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#D8DADA</color>
+    <color name="colorAccent">#D8DADA</color>
+
+    <color name="checkboxButtonTint">#454545</color>
+    <color name="tabIndicatorColor">#AEAEAE</color>
+    <color name="themeTextColor">#FFAAAAAA</color>
 </resources>

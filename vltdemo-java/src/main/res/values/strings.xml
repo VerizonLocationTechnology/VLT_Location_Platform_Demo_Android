@@ -9,22 +9,26 @@
     <string name="title_activity_map_gestures">Map Gestures</string>
     <string name="title_activity_map_shapes_demo">Shapes &amp; Markers</string>
     <string name="title_activity_user_location_demo">User Location</string>
+    <string name="title_activity_geojson_demo">GeoJSON</string>
 
     <string name="welcome_header_label">Welcome to the VLT Demo Application, view our supported functionality below.</string>
     <string name="mode_header_label">Verizon map modes show fresh day-time map tiles in multiple styles (e.g. - day, night, satellite) with additional options including terrain or traffic flow.</string>
     <string name="camera_header_label">Use camera controls to programmatically set, manage and limit user zoom, tilt and bearing.</string>
-    <string name="shapes_header_label">Place points, lines, and shapes to customize maps. Use geojson feature collections to render large scale datasets.</string>
+    <string name="shapes_header_label">Place points, lines and shapes to customize maps.</string>
+    <string name="geojson_header_label">Use GeoJSON feature collections to create and style points, lines and shapes on your map.</string>
     <string name="traffic_header_label">Control traffic layer visibilty.</string>
-    <string name="gestures_header_label">Use Gesture interface to listen for map events.</string>
+    <string name="gestures_header_label">Understand user interactions with the map using our gesture listeners and callbacks.</string>
     <string name="user_location_header_label">Display your real-time location, anywhere in the world.</string>
 
     <string name="camera_metric_tilt_label">Tilt: %1$s</string>
     <string name="camera_metric_bearing_label">Bearing: %1$s</string>
     <string name="camera_metric_zoom_label">Zoom Level: %1$s</string>
 
-    <string name="day_mode_label">Day Mode</string>
-    <string name="night_mode_label">Night Mode</string>
-    <string name="satellite_mode_label">Satellite Mode</string>
+    <string name="camera_invalid_number_message">Must be valid number.</string>
+
+    <string name="day_mode_label">Day</string>
+    <string name="night_mode_label">Night</string>
+    <string name="satellite_mode_label">Satellite</string>
 
     <string name="tilt_label">Tilt</string>
     <string name="update_label">Update</string>
@@ -35,6 +39,7 @@
     <string name="map_camera_dialog_label">Camera Metrics</string>
     <string name="current_camera_metrics_label">Current Metrics</string>
     <string name="map_shapes_dialog_label">Shape &amp; Marker options</string>
+    <string name="geojson_dialog_label">GeoJSON options</string>
 
     <string name="circle_label">Circle</string>
     <string name="marker_label">Marker</string>
@@ -44,4 +49,10 @@
     <string name="polyline_label">Polyline</string>
     <string name="traffic_on_label">Traffic On</string>
     <string name="traffic_off_label">Traffic Off</string>
+
+    <string name="point_label" translatable="false">Point</string>
+    <string name="multipoint_label" translatable="false">MultiPoint</string>
+    <string name="multipolygon_label" translatable="false">MultiPolygon</string>
+    <string name="linestring_label" translatable="false">LineString</string>
+    <string name="multilinestring_label" translatable="false">MultiLineString</string>
 </resources>

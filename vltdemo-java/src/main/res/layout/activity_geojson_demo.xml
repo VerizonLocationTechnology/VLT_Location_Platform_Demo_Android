@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GeojsonDemo">
+    <com.verizon.location.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/frosted_background"
+        android:clickable="true"
+        android:onClick="geojsonOptionsDialog"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true">
+        <TextView
+            android:id="@+id/geojson_options"
+            style="@style/FrostText"
+            android:text="@string/geojson_dialog_label"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/multi_polygon"
+            style="@style/FrostText"
+            android:text="@string/multipolygon_label"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/polygon"
+            style="@style/FrostText"
+            android:text="@string/polygon_label"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/point"
+            style="@style/FrostText"
+            android:text="@string/point_label"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/linestring"
+            style="@style/FrostText"
+            android:text="@string/linestring_label"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/multi_point"
+            style="@style/FrostText"
+            android:text="@string/multipoint_label"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/multi_linestring"
+            style="@style/FrostText"
+            android:text="@string/multilinestring_label"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -102,11 +102,14 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
     }
 
     private fun loadMap() {
+        pageViewModel.getOptions()?.let {
+            mapOptions = it.value
+        }
         pageViewModel.getMode()?.let {
             mapMode = it.value
         }
-        pageViewModel.getOptions()?.let {
-            mapOptions = it.value
+        mapMode?.let {
+            mapOptions?.mode = it
         }
         viewRoot?.apply {
             val mv: MapView = this.findViewById(R.id.map_view)
