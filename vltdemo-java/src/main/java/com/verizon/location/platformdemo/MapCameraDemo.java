@@ -97,19 +97,22 @@ public class MapCameraDemo extends AppCompatActivity {
             metricsDialog.setTitle(getResources().getString(R.string.map_camera_dialog_label));
 
             updateButton.setOnClickListener(v -> {
-                Double zoom = Double.valueOf(zoomText.getText().toString());
-                Double bearing = Double.valueOf(bearingText.getText().toString());
-                Double tilt = Double.valueOf(tiltText.getText().toString());
-
                 try {
-                    Coordinate currentPosition = vltMap.getCamera().getTarget();
-                    vltMap.getCamera().update(currentPosition, zoom, bearing, tilt, false);
-                    metricsDialog.dismiss();
-                } catch (IllegalArgumentException e) {
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Double zoom = Double.valueOf(zoomText.getText().toString());
+                    Double bearing = Double.valueOf(bearingText.getText().toString());
+                    Double tilt = Double.valueOf(tiltText.getText().toString());
+
+                    try {
+                        Coordinate currentPosition = vltMap.getCamera().getTarget();
+                        vltMap.getCamera().update(currentPosition, zoom, bearing, tilt, false);
+                        metricsDialog.dismiss();
+                    } catch (IllegalArgumentException e) {
+                        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                } catch (NumberFormatException e) {
+                    Toast.makeText(this, R.string.camera_invalid_number_message, Toast.LENGTH_SHORT).show();
                 }
             });
-            metricsDialog.setCancelable(false);
             metricsDialog.show();
         }
     }
@@ -124,7 +127,12 @@ public class MapCameraDemo extends AppCompatActivity {
     }
 
     private String getDoubleAsString(Double value) {
-        return String.format("%.2f", value);
+        String str = String.format("%.2f", value);
+        if (str.equals("-0.00")) {
+            return "0.00";
+        } else {
+            return str;
+        }
     }
 
     @Override

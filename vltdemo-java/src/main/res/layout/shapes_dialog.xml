@@ -9,26 +9,24 @@
         android:id="@+id/polyline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/polyline_label" />
+        android:text="@string/polyline_label"
+        android:buttonTint="@color/checkboxButtonTint" />
     <CheckBox
         android:id="@+id/polygon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/polygon_label" />
+        android:text="@string/polygon_label"
+        android:buttonTint="@color/checkboxButtonTint" />
     <CheckBox
         android:id="@+id/circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/circle_label" />
+        android:text="@string/circle_label"
+        android:buttonTint="@color/checkboxButtonTint" />
     <CheckBox
         android:id="@+id/marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/marker_label" />
-    <CheckBox
-        android:id="@+id/geojson"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/geojson_label"
-        android:visibility="gone" />
+        android:text="@string/marker_label"
+        android:buttonTint="@color/checkboxButtonTint" />
 </LinearLayout>

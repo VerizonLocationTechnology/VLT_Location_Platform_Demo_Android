@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+    {
+        "type": "Feature",
+        "properties": {
+          "stroke": "#0c6b00",
+          "stroke-width": 4,
+          "stroke-opacity": 1,
+          "fill": "#00d107",
+          "fill-opacity": ".25"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+              [-104.95738, 39.764525],
+              [-104.95419, 39.764906],
+              [-104.95362, 39.7622],
+              [-104.95738, 39.761416],
+              [-104.95972, 39.76248],
+              [-104.96064, 39.764216]
+            ]]
+        }
+      }
+    ]
+}

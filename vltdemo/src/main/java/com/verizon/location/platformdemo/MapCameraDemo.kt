@@ -12,6 +12,7 @@ import com.verizon.location.commonmodels.Coordinate
 import com.verizon.location.maps.*
 import com.verizon.location.maps.Camera.CameraListener
 import timber.log.Timber
+import java.lang.NumberFormatException
 
 class MapCameraDemo : AppCompatActivity() {
 
@@ -92,20 +93,23 @@ class MapCameraDemo : AppCompatActivity() {
 
         metricsDialog.setTitle(resources.getString(R.string.map_camera_dialog_label));
         updateButton.setOnClickListener { v: View? ->
-            val zoom = java.lang.Double.valueOf(zoomText.text.toString())
-            val bearing = java.lang.Double.valueOf(bearingText.text.toString())
-            val tilt = java.lang.Double.valueOf(tiltText.text.toString())
             try {
-                vltMap?.camera?.let {
-                    val currentPosition = it.target
-                    it.update(currentPosition, zoom, bearing, tilt, false)
+                val zoom = java.lang.Double.valueOf(zoomText.text.toString())
+                val bearing = java.lang.Double.valueOf(bearingText.text.toString())
+                val tilt = java.lang.Double.valueOf(tiltText.text.toString())
+                try {
+                    vltMap?.camera?.let {
+                        val currentPosition = it.target
+                        it.update(currentPosition, zoom, bearing, tilt, false)
+                    }
+                    metricsDialog.dismiss()
+                } catch (e: IllegalArgumentException) {
+                    Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
                 }
-                metricsDialog.dismiss()
-            } catch (e: IllegalArgumentException) {
-                Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            } catch (e: NumberFormatException) {
+                Toast.makeText(this, R.string.camera_invalid_number_message, Toast.LENGTH_SHORT).show()
             }
         }
-        metricsDialog.setCancelable(false)
         metricsDialog.show()
     }
 
@@ -128,7 +132,8 @@ class MapCameraDemo : AppCompatActivity() {
     }
 
     private fun getDoubleAsString(value: Double): String? {
-        return String.format("%.2f", value)
+        val str = String.format("%.2f", value)
+        return if (str == "-0.00") "0.00" else str
     }
 
     override fun onSupportNavigateUp(): Boolean {

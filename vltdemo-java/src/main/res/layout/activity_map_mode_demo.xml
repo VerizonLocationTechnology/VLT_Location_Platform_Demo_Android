@@ -13,7 +13,9 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary" />
+            app:tabIndicatorHeight="4dp"
+            app:tabIndicatorColor="@color/tabIndicatorColor"
+            app:tabTextColor="@color/checkboxButtonTint" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     private Context context;
-    private static final int CARD_SIZE = 7;
+    private static final int CARD_SIZE = 8;
     private String[] titles = new String[CARD_SIZE];
     private String[] summaries = new String[CARD_SIZE];
 
@@ -56,6 +56,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         break;
                     case 6:
                         context.startActivity(new Intent(context, MapGesturesDemo.class));
+                        break;
+                    case 7:
+                        context.startActivity(new Intent(context, GeojsonDemo.class));
                         break;
                 }
             });
@@ -100,7 +103,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 context.getResources().getString(R.string.title_activity_user_location_demo),
                 context.getResources().getString(R.string.title_activity_map_shapes_demo),
                 context.getResources().getString(R.string.title_activity_map_traffic),
-                context.getResources().getString(R.string.title_activity_map_gestures)
+                context.getResources().getString(R.string.title_activity_map_gestures),
+                context.getResources().getString(R.string.title_activity_geojson_demo)
         };
 
         summaries = new String[] {
@@ -110,7 +114,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 context.getResources().getString(R.string.user_location_header_label),
                 context.getResources().getString(R.string.shapes_header_label),
                 context.getResources().getString(R.string.traffic_header_label),
-                context.getResources().getString(R.string.gestures_header_label)
+                context.getResources().getString(R.string.gestures_header_label),
+                context.getResources().getString(R.string.geojson_header_label)
         };
     }
 }
