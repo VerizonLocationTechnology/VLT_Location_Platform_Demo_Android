@@ -15,6 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".BoundingBoxDemo"
+            android:label="@string/title_activity_map_bounding_box"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".GeojsonDemo"
             android:label="@string/title_activity_geojson_demo"
             android:parentActivityName=".MainActivity"
@@ -44,12 +48,15 @@
         <activity
             android:name=".MapCameraDemo"
             android:label="@string/title_activity_map_camera_demo"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="sensorPortrait"
-            tools:ignore="LockedOrientationActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MapModeDemo"
             android:label="@string/title_activity_map_mode_demo"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LayersDemoActivity"
+            android:label="@string/title_activity_layers_demo"
+            android:screenOrientation="sensorPortrait"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity"
             android:screenOrientation="sensorPortrait"

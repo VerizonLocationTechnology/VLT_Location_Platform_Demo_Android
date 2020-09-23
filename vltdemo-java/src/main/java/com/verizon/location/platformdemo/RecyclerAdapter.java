@@ -11,11 +11,13 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.verizon.location.platformdemo.layers.LayersDemo;
+
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     private Context context;
-    private static final int CARD_SIZE = 8;
+    private static final int CARD_SIZE = 10;
     private String[] titles = new String[CARD_SIZE];
     private String[] summaries = new String[CARD_SIZE];
 
@@ -59,6 +61,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         break;
                     case 7:
                         context.startActivity(new Intent(context, GeojsonDemo.class));
+                        break;
+                    case 8:
+                        context.startActivity(new Intent(context, LayersDemo.class));
+                        break;
+                    case 9:
+                        context.startActivity(new Intent(context, BoundingBoxDemo.class));
                         break;
                 }
             });
@@ -104,7 +112,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 context.getResources().getString(R.string.title_activity_map_shapes_demo),
                 context.getResources().getString(R.string.title_activity_map_traffic),
                 context.getResources().getString(R.string.title_activity_map_gestures),
-                context.getResources().getString(R.string.title_activity_geojson_demo)
+                context.getResources().getString(R.string.title_activity_geojson_demo),
+                context.getResources().getString(R.string.title_activity_layers_demo),
+                context.getResources().getString(R.string.title_activity_map_bounding_box)
         };
 
         summaries = new String[] {
@@ -115,7 +125,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 context.getResources().getString(R.string.shapes_header_label),
                 context.getResources().getString(R.string.traffic_header_label),
                 context.getResources().getString(R.string.gestures_header_label),
-                context.getResources().getString(R.string.geojson_header_label)
+                context.getResources().getString(R.string.geojson_header_label),
+                context.getResources().getString(R.string.layers_header_label),
+                context.getResources().getString(R.string.bounding_box_header_label)
         };
     }
 }

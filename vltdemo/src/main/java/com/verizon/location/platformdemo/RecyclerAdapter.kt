@@ -22,7 +22,9 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
         context.resources.getString(R.string.title_activity_map_shapes_demo),
         context.resources.getString(R.string.title_activity_map_traffic),
         context.resources.getString(R.string.title_activity_map_gestures),
-        context.resources.getString(R.string.title_activity_geojson_demo)
+        context.resources.getString(R.string.title_activity_geojson_demo),
+        context.resources.getString(R.string.title_activity_layers_demo),
+        context.resources.getString(R.string.title_activity_map_bounding_box)
     )
     private val summaries = arrayOf(
         context.resources.getString(R.string.welcome_header_label),
@@ -32,7 +34,9 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
         context.resources.getString(R.string.shapes_header_label),
         context.resources.getString(R.string.traffic_header_label),
         context.resources.getString(R.string.gestures_header_label),
-        context.resources.getString(R.string.geojson_header_label)
+        context.resources.getString(R.string.geojson_header_label),
+        context.resources.getString(R.string.layers_header_label),
+        context.resources.getString(R.string.bounding_box_header_label)
     )
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -53,6 +57,8 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
                     5 -> { context.startActivity(Intent(context, MapTrafficDemo::class.java)) }
                     6 -> { context.startActivity(Intent(context, MapGesturesDemo::class.java)) }
                     7 -> { context.startActivity(Intent(context, GeojsonDemo::class.java)) }
+                    8 -> { context.startActivity(Intent(context, LayersDemoActivity::class.java)) }
+                    9 -> { context.startActivity(Intent(context, BoundingBoxDemo::class.java)) }
                 }
             }
         }

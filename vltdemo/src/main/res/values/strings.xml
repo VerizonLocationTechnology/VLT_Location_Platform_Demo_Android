@@ -4,12 +4,15 @@
 
     <string name="title_activity_main">Home</string>
     <string name="title_activity_map_mode_demo">Mode</string>
+    <string name="title_activity_layers_demo">Relative Layering</string>
     <string name="title_activity_map_traffic">Traffic</string>
     <string name="title_activity_map_camera_demo">Camera</string>
     <string name="title_activity_map_gestures">Map Gestures</string>
     <string name="title_activity_map_shapes_demo">Shapes &amp; Markers</string>
     <string name="title_activity_user_location_demo">User Location</string>
     <string name="title_activity_geojson_demo">GeoJSON</string>
+    <string name="title_activity_map_bounding_box">Bounding Box</string>
+    <string name="title_activity_map_layers">Layers</string>
 
     <string name="welcome_header_label">Welcome to the VLT Demo Application, view our supported functionality below.</string>
     <string name="mode_header_label">Verizon map modes show fresh day-time map tiles in multiple styles (e.g. - day, night, satellite) with additional options including terrain or traffic flow.</string>
@@ -19,6 +22,8 @@
     <string name="traffic_header_label">Control traffic layer visibilty.</string>
     <string name="gestures_header_label">Understand user interactions with the map using our gesture listeners and callbacks.</string>
     <string name="user_location_header_label">Display your real-time location, anywhere in the world.</string>
+    <string name="layers_header_label">Easily group objects together on a layer, and place them on the map relative to other layers.</string>
+    <string name="bounding_box_header_label">Set camera position using latitude and longitude bounds.</string>
 
     <string name="camera_metric_tilt_label">Tilt: %1$s</string>
     <string name="camera_metric_bearing_label">Bearing: %1$s</string>
@@ -50,10 +55,17 @@
     <string name="polyline_label">Polyline</string>
     <string name="traffic_on_label">Traffic On</string>
     <string name="traffic_off_label">Traffic Off</string>
+    <string name="layers_edit_label">Edit Layers</string>
 
     <string name="point_label">Point</string>
     <string name="multipoint_label">MultiPoint</string>
     <string name="multipolygon_label">MultiPolygon</string>
     <string name="linestring_label">LineString</string>
     <string name="multilinestring_label">MultiLineString</string>
+
+    <string name="zoom_to">Zoom to…</string>
+    <string name="colorado_label">Colorado</string>
+    <string name="texas_label">Texas</string>
+    <string name="new_york_label">New York</string>
+    <string name="utah_label">Utah</string>
 </resources>

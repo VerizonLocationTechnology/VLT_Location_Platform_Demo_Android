@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/co"
+        android:title="@string/colorado_label"
+        app:showAsAction="never" />
+    <item android:id="@+id/tx"
+        android:title="@string/texas_label" />
+    <item android:id="@+id/ny"
+        android:title="@string/new_york_label" />
+    <item android:id="@+id/ut"
+        android:title="@string/utah_label" />
+</menu>

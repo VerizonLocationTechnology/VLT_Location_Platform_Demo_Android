@@ -14,6 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".BoundingBoxDemo"
+            android:label="@string/title_activity_map_bounding_box"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".GeojsonDemo"
             android:label="@string/title_activity_geojson_demo"
@@ -22,9 +25,7 @@
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".MapGesturesDemo"
             android:label="@string/title_activity_map_gestures"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="sensorPortrait"
-            tools:ignore="LockedOrientationActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MapTrafficDemo"
             android:label="@string/title_activity_map_traffic"
             android:parentActivityName=".MainActivity"
@@ -33,9 +34,7 @@
         <activity
             android:name=".MapModeDemo"
             android:label="@string/title_activity_map_mode_demo"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="sensorPortrait"
-            tools:ignore="LockedOrientationActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".UserLocationDemo"
             android:label="@string/title_activity_user_location_demo"
@@ -51,6 +50,10 @@
         <activity
             android:name=".MapCameraDemo"
             android:label="@string/title_activity_map_camera_demo"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".layers.LayersDemo"
+            android:label="@string/title_activity_layers_demo"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="sensorPortrait"
             tools:ignore="LockedOrientationActivity" />
