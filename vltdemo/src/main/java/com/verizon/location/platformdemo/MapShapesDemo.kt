@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.verizon.location.commonmodels.Coordinate
 import com.verizon.location.maps.*
 import com.verizon.location.maps.model.*
+import com.verizon.location.maps.model.layer.ShapeLayer
 import timber.log.Timber
 
 class MapShapesDemo : AppCompatActivity() {
@@ -23,6 +24,8 @@ class MapShapesDemo : AppCompatActivity() {
     private var circles = mutableListOf<Circle>()
     private var polygons = mutableListOf<Polygon>()
     private var polylines = mutableListOf<Polyline>()
+
+    private val shapeLayer = ShapeLayer("shape_layer")
 
     private var shapeOptions: TextView? = null
     private val state = intArrayOf(0, 0, 0, 0)
@@ -43,6 +46,7 @@ class MapShapesDemo : AppCompatActivity() {
             object : OnMapReadyCallback {
                 override fun onMapReady(map: VltMap) {
                     Timber.e("onMapReady: %s", map)
+                    map.addLayer(shapeLayer);
                     vltMap = map
                     mapIsVisible = true
                     initializeShapes()
@@ -121,13 +125,13 @@ class MapShapesDemo : AppCompatActivity() {
     private fun showPolyline(show: Boolean) {
         if (show) {
             polylines.forEach {
-                vltMap?.add(it)
+                shapeLayer.addShape(it)
             }
             state[0] = 1
             findViewById<View>(R.id.polyline).visibility = View.VISIBLE
         } else {
             polylines.forEach {
-                vltMap?.remove(it)
+                shapeLayer.removeShape(it)
             }
             state[0] = 0
             findViewById<View>(R.id.polyline).visibility = View.GONE
@@ -138,13 +142,13 @@ class MapShapesDemo : AppCompatActivity() {
     private fun showPolygon(show: Boolean) {
         if (show) {
             polygons.forEach {
-                vltMap?.add(it)
+                shapeLayer.addShape(it)
             }
             state[1] = 1
             findViewById<View>(R.id.polygon).visibility = View.VISIBLE
         } else {
             polygons.forEach {
-                vltMap?.remove(it)
+                shapeLayer.removeShape(it)
             }
             state[1] = 0
             findViewById<View>(R.id.polygon).visibility = View.GONE
@@ -155,13 +159,13 @@ class MapShapesDemo : AppCompatActivity() {
     private fun showCircles(show: Boolean) {
         if (show) {
             circles.forEach {
-                vltMap?.add(it)
+                shapeLayer.addShape(it)
             }
             state[2] = 1
             findViewById<View>(R.id.circle).visibility = View.VISIBLE
         } else {
             circles.forEach {
-                vltMap?.remove(it)
+                shapeLayer.removeShape(it)
             }
             state[2] = 0
             findViewById<View>(R.id.circle).visibility = View.GONE
@@ -172,13 +176,13 @@ class MapShapesDemo : AppCompatActivity() {
     private fun showMarkers(show: Boolean) {
         if (show) {
             markers.forEach {
-                vltMap?.add(it)
+                shapeLayer.addShape(it)
             }
             state[3] = 1
             findViewById<View>(R.id.marker).visibility = View.VISIBLE
         } else {
             markers.forEach {
-                vltMap?.remove(it)
+                shapeLayer.removeShape(it)
             }
             state[3] = 0
             findViewById<View>(R.id.marker).visibility = View.GONE

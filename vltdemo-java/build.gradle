@@ -11,7 +11,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.3.0"
+        versionName "1.3.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    implementation "com.verizon.location.services.maps:maps-mapbox:1.3.0"
+    implementation "com.verizon.location.services.maps:maps-mapbox:1.3.1"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

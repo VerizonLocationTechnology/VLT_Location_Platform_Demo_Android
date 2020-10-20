@@ -22,6 +22,7 @@ import com.verizon.location.maps.model.Marker;
 import com.verizon.location.maps.model.MarkerImage;
 import com.verizon.location.maps.model.Polygon;
 import com.verizon.location.maps.model.Polyline;
+import com.verizon.location.maps.model.layer.ShapeLayer;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -43,6 +44,7 @@ public class MapShapesDemo extends AppCompatActivity {
     private TextView shapeOptions;
     private int[] state = {0, 0, 0, 0};
 
+    private ShapeLayer shapeLayer = new ShapeLayer("shape_layer");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,7 @@ public class MapShapesDemo extends AppCompatActivity {
             @Override
             public void onMapReady(@NotNull VltMap map) {
                 Timber.e("onMapReady: %s", map);
+                map.addLayer(shapeLayer);
                 MapShapesDemo.this.vltMap = map;
                 mapIsVisible = true;
                 initializeShapes();
@@ -126,13 +129,13 @@ public class MapShapesDemo extends AppCompatActivity {
     private void showPolyline(boolean show) {
         if (show) {
             for (Polyline p : polylines) {
-                vltMap.add(p);
+                shapeLayer.addShape(p);
             }
             state[0] = 1;
             findViewById(R.id.polyline).setVisibility(View.VISIBLE);
         } else {
             for (Polyline p : polylines) {
-                vltMap.remove(p);
+                shapeLayer.removeShape(p);
             }
             state[0] = 0;
             findViewById(R.id.polyline).setVisibility(View.GONE);
@@ -143,13 +146,13 @@ public class MapShapesDemo extends AppCompatActivity {
     private void showPolygon(boolean show) {
         if (show) {
             for (Polygon p : polygons) {
-                vltMap.add(p);
+                shapeLayer.addShape(p);
             }
             state[1] = 1;
             findViewById(R.id.polygon).setVisibility(View.VISIBLE);
         } else {
             for (Polygon p : polygons) {
-                vltMap.remove(p);
+                shapeLayer.removeShape(p);
             }
             state[1] = 0;
             findViewById(R.id.polygon).setVisibility(View.GONE);
@@ -160,13 +163,13 @@ public class MapShapesDemo extends AppCompatActivity {
     private void showCircles(boolean show) {
         if (show) {
             for (Circle c : circles) {
-                vltMap.add(c);
+                shapeLayer.addShape(c);
             }
             state[2] = 1;
             findViewById(R.id.circle).setVisibility(View.VISIBLE);
         } else {
             for (Circle c : circles) {
-                vltMap.remove(c);
+                shapeLayer.removeShape(c);
             }
             state[2] = 0;
             findViewById(R.id.circle).setVisibility(View.GONE);
@@ -177,13 +180,13 @@ public class MapShapesDemo extends AppCompatActivity {
     private void showMarkers(boolean show) {
         if (show) {
             for (Marker m : markers) {
-                vltMap.add(m);
+                shapeLayer.addShape(m);
             }
             state[3] = 1;
             findViewById(R.id.marker).setVisibility(View.VISIBLE);
         } else {
             for (Marker m : markers) {
-                vltMap.remove(m);
+                shapeLayer.removeShape(m);
             }
             state[3] = 0;
             findViewById(R.id.marker).setVisibility(View.GONE);
