@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.verizon.location.navdemo">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VLTDemo">
+
+        <meta-data android:name="com.here.sdk.access_key_id" android:value="Enter HERE credentials here, contact Customer Success for your key" />
+        <meta-data android:name="com.here.sdk.access_key_secret" android:value="Enter HERE credentials here, contact Customer Success for your key" />
+
+        <activity android:name="com.verizon.location.navdemo.NavigationDemoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service android:name="com.verizon.location.navdemo.NavigationService" />
+
+    </application>
+</manifest>

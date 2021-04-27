@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">VLT Nav Demo</string>
+
+    <string name="nav_tag">NAV_FRAG</string>
+    <string name="show_routes">Show Routes</string>
+
+    <string name="style_load_failed_label">Could not load Style</string>
+
+    <string name="dismiss_label">Dismiss</string>
+
+    <string name="mode_menu_group_label">Map Modes</string>
+    <string name="day_mode_label">Day</string>
+    <string name="night_mode_label">Night</string>
+    <string name="satellite_mode_label">Satellite</string>
+
+    <string name="traffic_menu_group_label">Map Layers</string>
+    <string name="traffic_flow_label">Traffic Flow</string>
+    <string name="traffic_incidents_label">Traffic Incidents</string>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="nav_ui_top_bar_elevation" type="dimen">4dp</item>
+
+</resources>

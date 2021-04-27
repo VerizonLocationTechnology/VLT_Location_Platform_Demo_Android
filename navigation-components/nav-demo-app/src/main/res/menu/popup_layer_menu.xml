@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <group
+        android:id="@+id/mode_group"
+        android:checkableBehavior="single">
+        <item
+            android:title="@string/mode_menu_group_label"
+            android:enabled="false"
+            android:checkable="false"
+            />
+        <item android:id="@+id/day"
+            android:title="@string/day_mode_label"
+            app:showAsAction="never" />
+        <item android:id="@+id/night"
+            android:title="@string/night_mode_label"
+            />
+        <item android:id="@+id/sat"
+            android:title="@string/satellite_mode_label"
+            />
+    </group>
+    <group
+        android:id="@+id/traffic_group"
+        android:checkableBehavior="all">
+        <item
+            android:title="@string/traffic_menu_group_label"
+            android:enabled="false"
+            android:checkable="false"
+            />
+        <item android:id="@+id/flow"
+            android:title="@string/traffic_flow_label"
+            />
+        <item android:id="@+id/incidents"
+            android:title="@string/traffic_incidents_label"
+            />
+    </group>
+</menu>

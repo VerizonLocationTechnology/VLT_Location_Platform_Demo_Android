@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">VLT Demo-Java</string>
-    <string name="map_key">ENTER YOUR MAP KEY HERE</string>
+    <string name="map_key">Enter VLTApiKey here, contact Customer Success for your key</string>
 
     <string name="title_activity_main">Home</string>
     <string name="title_activity_map_mode_demo">Mode</string>
@@ -13,6 +13,7 @@
     <string name="title_activity_geojson_demo">GeoJSON</string>
     <string name="title_activity_map_bounding_box">Bounding Box</string>
     <string name="title_activity_map_layers">Layers</string>
+    <string name="title_activity_navigation">Navigation</string>
 
     <string name="welcome_header_label">Welcome to the VLT Demo Application, view our supported functionality below.</string>
     <string name="mode_header_label">Verizon map modes show fresh day-time map tiles in multiple styles (e.g. - day, night, satellite) with additional options including terrain or traffic flow.</string>
@@ -24,6 +25,7 @@
     <string name="user_location_header_label">Display your real-time location, anywhere in the world.</string>
     <string name="layers_header_label">Easily group objects together on a layer, and place them on the map relative to other layers.</string>
     <string name="bounding_box_header_label">Set camera position using latitude and longitude bounds.</string>
+    <string name="navigation_header_label">Integrate HERE Navigation SDK with VLT Maps SDK.</string>
 
     <string name="camera_metric_tilt_label">Tilt: %1$s</string>
     <string name="camera_metric_bearing_label">Bearing: %1$s</string>
@@ -52,8 +54,10 @@
     <string name="geojson_label">GeoJson</string>
     <string name="traffic_label">Traffic</string>
     <string name="polyline_label">Polyline</string>
-    <string name="traffic_on_label">Traffic On</string>
-    <string name="traffic_off_label">Traffic Off</string>
+    <string name="traffic_flow_on_label">Traffic Flow On</string>
+    <string name="traffic_flow_off_label">Traffic Flow Off</string>
+    <string name="traffic_incident_on_label">Traffic Incidents On</string>
+    <string name="traffic_incident_off_label">Traffic Incidents Off</string>
     <string name="layers_edit_label">Edit Layers</string>
 
     <string name="point_label" translatable="false">Point</string>

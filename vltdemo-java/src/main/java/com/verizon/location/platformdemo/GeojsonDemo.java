@@ -289,7 +289,6 @@ public class GeojsonDemo extends AppCompatActivity {
                 addMultiPointFeature(featureCollection);
                 break;
             default:
-                Log.wtf("", "unsupported type : "+type);
                 break;
         }
     }

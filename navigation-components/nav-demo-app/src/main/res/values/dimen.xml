@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="nav_fab_padding_end">16dp</dimen>
+    <dimen name="nav_fab_padding_top">16dp</dimen>
+
+    <item name="search_container_elevation" type="dimen">2dp</item>
+    <item name="search_container_padding_bottom" type="dimen">10dp</item>
+    <item name="search_container_padding_side" type="dimen">16dp</item>
+    <item name="search_container_padding_top" type="dimen">8dp</item>
+
+</resources>

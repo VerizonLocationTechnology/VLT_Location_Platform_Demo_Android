@@ -1,0 +1,23 @@
+ext.versions = [
+    vlt_maps: '1.4.0',
+    vlt_search: '1.1.1',
+    vlt_searchview: '0.1.21998902',
+
+    android_sdk: [
+        compile: 29,
+        min: 21,
+        target: 29
+    ],
+
+    appcompat: '1.2.0',
+    constraint: '2.0.4',
+    core: '1.3.2',
+    espresso: '3.3.0',
+    fragment: '1.3.0',
+    junit: '4.12',
+    junit_ext: '1.1.2',
+    lifecycle: '2.2.0',
+    kotlin: '1.4.10',
+    material: '1.2.1',
+    timber: '4.7.1'
+]

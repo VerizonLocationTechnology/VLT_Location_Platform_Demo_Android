@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:background="?attr/colorPrimary"
+            android:elevation="@dimen/search_container_elevation"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/search_container_padding_bottom"
+            android:paddingEnd="@dimen/search_container_padding_side"
+            android:paddingStart="@dimen/search_container_padding_side"
+            android:paddingTop="@dimen/search_container_padding_top">
+            <com.verizon.location.navdemo.SearchBar
+                android:id="@+id/search_bar"
+                app:cardBackgroundColor="?attr/colorSurface"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/map_container"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <com.verizon.location.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/fab_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/nav_fab_padding_end"
+                android:paddingTop="@dimen/nav_fab_padding_top">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/mode_fab"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_layers_outline" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/my_location_fab"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_near_me" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_frag"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:name="com.verizon.location.navdemo.NavigationFragment"
+        android:tag="@string/nav_tag" />
+
+    <FrameLayout
+        android:id="@+id/search_container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+</FrameLayout>

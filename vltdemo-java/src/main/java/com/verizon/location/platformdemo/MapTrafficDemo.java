@@ -48,16 +48,31 @@ public class MapTrafficDemo extends AppCompatActivity {
             }
         });
 
-        CheckBox checkBox = findViewById(R.id.feature_switch);
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        CheckBox trafficFlowCheckBox = findViewById(R.id.feature_switch_traffic_flow);
+        trafficFlowCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (mapIsVisible) {
-                    map.setFeatureVisible(MapFeature.TRAFFIC, b);
+                    map.setFeatureVisible(MapFeature.TRAFFIC_FLOW, b);
                     if (b) {
-                        checkBox.setText(getResources().getString(R.string.traffic_on_label));
+                        trafficFlowCheckBox.setText(getResources().getString(R.string.traffic_flow_on_label));
                     } else {
-                        checkBox.setText(getResources().getString(R.string.traffic_off_label));
+                        trafficFlowCheckBox.setText(getResources().getString(R.string.traffic_flow_off_label));
+                    }
+                }
+            }
+        });
+
+        CheckBox trafficIncidentsCheckBox = findViewById(R.id.feature_switch_traffic_incidents);
+        trafficIncidentsCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (mapIsVisible) {
+                    map.setFeatureVisible(MapFeature.TRAFFIC_INCIDENTS, b);
+                    if (b) {
+                        trafficIncidentsCheckBox.setText(getResources().getString(R.string.traffic_incident_on_label));
+                    } else {
+                        trafficIncidentsCheckBox.setText(getResources().getString(R.string.traffic_incident_off_label));
                     }
                 }
             }

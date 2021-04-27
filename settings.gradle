@@ -1,3 +1,8 @@
+include ':navigation-components:nav-demo-app'
+include ':navigation-components:search-ui'
+include ':navigation-components:navigation-ui'
+include ':navigation-components:navigation'
+include ':navigation-components:common'
 include ':vltdemo-java'
 include ':vltdemo'
 rootProject.name = "VLT Demo"

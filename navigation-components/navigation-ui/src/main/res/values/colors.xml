@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <public type="color" name="VE_navigationIconBackground"/>
+    <color name="VE_navigationIconBackground">@android:color/holo_blue_light</color>
+    <color name="VE_navigationStartButtonBackground">@android:color/holo_blue_light</color>
+    <color name="VE_navigationStartButtonText">@android:color/white</color>
+
+</resources>

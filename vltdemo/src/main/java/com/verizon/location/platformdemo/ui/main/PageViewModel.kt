@@ -21,7 +21,9 @@ class PageViewModel : ViewModel() {
     }
 
     fun setMapMode(mode: MapMode?) {
-        mapMode.value = mode
+        mode?.let {
+            mapMode.value = it
+        }
     }
 
     fun getMode(): LiveData<MapMode?>? {
@@ -29,7 +31,9 @@ class PageViewModel : ViewModel() {
     }
 
     fun setOptions(options: VltMapOptions?) {
-        mapOptions.value = options
+        options?.let {
+            mapOptions.value = it
+        }
     }
 
     fun getOptions(): LiveData<VltMapOptions?>? {

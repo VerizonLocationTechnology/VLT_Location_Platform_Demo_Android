@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.verizon.location.navdemo.NavigationDemoActivity;
 import com.verizon.location.platformdemo.layers.LayersDemo;
 
 
@@ -68,6 +69,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     case 9:
                         context.startActivity(new Intent(context, BoundingBoxDemo.class));
                         break;
+                    case 10:
+                        context.startActivity(new Intent(context, NavigationDemoActivity.class));
+                        break;
                 }
             });
         }
@@ -114,7 +118,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 context.getResources().getString(R.string.title_activity_map_gestures),
                 context.getResources().getString(R.string.title_activity_geojson_demo),
                 context.getResources().getString(R.string.title_activity_layers_demo),
-                context.getResources().getString(R.string.title_activity_map_bounding_box)
+                context.getResources().getString(R.string.title_activity_map_bounding_box),
+                context.getResources().getString(R.string.title_activity_navigation)
         };
 
         summaries = new String[] {
@@ -127,7 +132,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 context.getResources().getString(R.string.gestures_header_label),
                 context.getResources().getString(R.string.geojson_header_label),
                 context.getResources().getString(R.string.layers_header_label),
-                context.getResources().getString(R.string.bounding_box_header_label)
+                context.getResources().getString(R.string.bounding_box_header_label),
+                context.getResources().getString(R.string.navigation_header_label)
         };
     }
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_ui"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <com.verizon.location.navigation.ui.view.RouteOverviewView
+        android:id="@+id/route_overview"
+        android:background="?attr/colorPrimary"
+        android:clickable="true"
+        android:elevation="@dimen/nav_ui_top_bar_elevation"
+        android:focusable="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="invisible" />
+
+    <com.verizon.location.navigation.ui.view.ControlBarView
+        android:id="@+id/control_bar"
+        android:background="?attr/colorPrimary"
+        android:clickable="true"
+        android:elevation="@dimen/nav_ui_top_bar_elevation"
+        android:focusable="true"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="invisible" />
+
+    <com.verizon.location.navigation.ui.view.ManeuverBarView
+        android:id="@+id/maneuver_bar"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/nav_ui_top_bar_elevation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.verizon.location.navigation.ui.view.RouteDestinationView
+        android:id="@+id/destination_view"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/nav_ui_top_bar_elevation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.verizon.location.navigation.ui.view.RouteDetailsView
+        android:id="@+id/route_details_view"
+        android:background="?attr/colorPrimary"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/search_frag_container"
+        android:elevation="12dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/current_icon"
+        android:layout_gravity="start"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="44dp"
+        android:src="@drawable/navatar_elevator"
+        android:tint="?attr/colorOnPrimary"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/current_maneuver"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:singleLine="false" />
+
+        <TextView
+            android:id="@+id/distance_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="19sp"
+            android:maxLines="1"
+            android:singleLine="false" />
+
+    </LinearLayout>
+
+</merge>
