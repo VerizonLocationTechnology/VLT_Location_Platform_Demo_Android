@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.verizon.location.maps.MapMode
 import com.verizon.location.maps.VltMapOptions
 
-class PageViewModel : ViewModel() {
+class MapModePageViewModel : ViewModel() {
 
     private val _index = MutableLiveData<Int>()
     private val mapMode = MutableLiveData<MapMode>()

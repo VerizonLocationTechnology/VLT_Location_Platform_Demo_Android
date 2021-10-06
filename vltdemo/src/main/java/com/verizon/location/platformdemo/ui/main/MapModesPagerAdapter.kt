@@ -8,7 +8,9 @@ import com.verizon.location.platformdemo.R
 
 private val TAB_TITLES = arrayOf(
     R.string.day_mode_label,
+    R.string.day_3d_mode_label,
     R.string.night_mode_label,
+    R.string.night_3d_mode_label,
     R.string.satellite_mode_label
 )
 
@@ -22,7 +24,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1)
+        return MapModeFragment.newInstance(position + 1)
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
@@ -30,6 +32,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     override fun getCount(): Int {
-        return 3
+        return TAB_TITLES.size
     }
 }
