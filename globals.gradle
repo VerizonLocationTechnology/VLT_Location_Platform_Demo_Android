@@ -1,5 +1,5 @@
 ext.versions = [
-    vlt_maps: '1.4.0',
+    vlt_maps: '1.4.2',
     vlt_search: '1.1.1',
     vlt_searchview: '0.1.21998902',
 

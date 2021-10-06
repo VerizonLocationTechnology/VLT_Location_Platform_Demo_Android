@@ -15,13 +15,15 @@ import com.verizon.location.platformdemo.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class MapModesPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.day_mode_label, R.string.night_mode_label, R.string.satellite_mode_label};
+    private static final int[] TAB_TITLES = new int[]{R.string.day_mode_label,
+            R.string.day_3d_mode_label, R.string.night_mode_label,
+            R.string.night_3d_mode_label, R.string.satellite_mode_label};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public MapModesPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -30,7 +32,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        return MapModeFragment.newInstance(position + 1);
     }
 
     @Nullable
@@ -41,6 +43,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return TAB_TITLES.length;
     }
 }

@@ -19,9 +19,9 @@ import com.verizon.location.platformdemo.R
 /**
  * A placeholder fragment containing a simple view.
  */
-class PlaceholderFragment : Fragment(), Camera.CameraListener {
+class MapModeFragment : Fragment(), Camera.CameraListener {
 
-    private lateinit var pageViewModel: PageViewModel
+    private lateinit var mapModePageViewModel: MapModePageViewModel
     private var mapMode: MapMode? = null
     private var mapOptions: VltMapOptions? = null
     private var vltMap: VltMap? = null
@@ -31,7 +31,7 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        pageViewModel = ViewModelProviders.of(this).get(PageViewModel::class.java).apply {
+        mapModePageViewModel = ViewModelProviders.of(this).get(MapModePageViewModel::class.java).apply {
             setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
             setMapMode(arguments?.getSerializable(ARG_MAP_MODE) as MapMode?)
         }
@@ -44,7 +44,7 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
         val root = inflater.inflate(R.layout.fragment_map_mode_demo, container, false)
         val textView: TextView = root.findViewById(R.id.section_label)
 
-        pageViewModel.text.observe(viewLifecycleOwner, Observer<String> {
+        mapModePageViewModel.text.observe(viewLifecycleOwner, Observer<String> {
             textView.text = it
         })
         textView.setTextColor(Color.BLACK)
@@ -82,13 +82,15 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): PlaceholderFragment {
-            return PlaceholderFragment().apply {
+        fun newInstance(sectionNumber: Int): MapModeFragment {
+            return MapModeFragment().apply {
                 arguments = Bundle().apply {
                     when (sectionNumber) {
                         1 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_DAY)
-                        2 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_NIGHT)
-                        3 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_SAT)
+                        2 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_DAY_3D)
+                        3 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_NIGHT)
+                        4 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_NIGHT_3D)
+                        5 -> putSerializable(ARG_MAP_MODE, MapMode.VERIZON_SAT)
                     }
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }
@@ -102,10 +104,10 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
     }
 
     private fun loadMap() {
-        pageViewModel.getOptions()?.let {
+        mapModePageViewModel.getOptions()?.let {
             mapOptions = it.value
         }
-        pageViewModel.getMode()?.let {
+        mapModePageViewModel.getMode()?.let {
             mapMode = it.value
         }
         mapMode?.let {
@@ -116,7 +118,8 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
             mv.initialize(
                 resources.getString(R.string.map_key),
                 mapOptions ?: VltMapOptions().apply {
-                    this.zoom = 12.0
+                    this.zoom = 12.5
+                    this.tilt = 25.0
                     this.target = Coordinate(42.3637f, -71.053604f)
                     this.mode = mapMode ?: MapMode.VERIZON_DAY
                 },
@@ -128,7 +131,7 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
 
                     override fun onMapReady(map: VltMap) {
                         Timber.e("onMapReady: %s", map)
-                        map.camera.addCameraListener(this@PlaceholderFragment)
+                        map.camera.addCameraListener(this@MapModeFragment)
                         vltMap = map
                     }
                 })
@@ -142,6 +145,6 @@ class PlaceholderFragment : Fragment(), Camera.CameraListener {
             this.bearing = bearing
             this.tilt = tilt
         }
-        this@PlaceholderFragment.pageViewModel.setOptions(mapOptions)
+        this@MapModeFragment.mapModePageViewModel.setOptions(mapOptions)
     }
 }

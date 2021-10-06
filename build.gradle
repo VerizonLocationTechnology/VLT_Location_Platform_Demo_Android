@@ -24,6 +24,17 @@ allprojects {
             url 'https://api.mapbox.com/downloads/v2/releases/maven'
         }
 
+        maven {
+            credentials(PasswordCredentials) {
+                username = 'mapbox'
+                password mapbox_downloads_token
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+        }
+
         flatDir {
             dirs 'libs'
         }
